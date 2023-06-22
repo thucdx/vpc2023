@@ -7,10 +7,8 @@ import java.util.StringTokenizer;
  * @author thucdx
  */
 public class J_RobotThongMinh {
-
     static boolean IS_LOCAL = System.getenv("LOCAL_JUDGE") != null;
     static boolean DEBUG = IS_LOCAL & true;
-
     static String base = "LRUD";
     static int dx[] = {0, 0, -1, 1};
     static int dy[] = {-1, 1, 0, 0};
@@ -110,13 +108,10 @@ public class J_RobotThongMinh {
                         totalMax = total;
                         best = dirs.toString();
                     }
-
-//                    debug(dirs, total, totalMax, best);
                 }
 
                 ow.write(best + "\n");
                 ow.close();
-                // Process here!
             }
 
         } catch (Exception ex) {
