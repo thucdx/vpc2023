@@ -32,7 +32,7 @@ Sắp xếp vị trí của Nhà, và vị trí Kho gạo theo thứ tự tăng 
 ### C. Khảo sát dân cư
 
 Bài này cần sắp xếp theo thứ tự giảm dần của `f_i = c_i / p_i`.
-Sau đó lấy lần lượt từ trên xuống dưới dừng lại khi `f_i < f_(i-1)`.
+Sau đó lấy lần lượt từ trên xuống dưới dừng lại khi `f_i > f_(i-1)`.
 Bài sẽ hay hơn nếu yêu cầu in ra `k` lớn nhất, thay vì bất kì `k` nào.
 
 [View source C_KhaoSatDanCu (Java)](src/C_KhaoSatDanCu.java)
