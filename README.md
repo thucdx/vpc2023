@@ -1,4 +1,4 @@
-VPC 2023
+Viettel Programming Contest 2023
 ----
 
 
@@ -10,6 +10,7 @@ VPC 2023
 - [Bảng ranking cuối cùng](resources/ranking_before_freeze.csv)
 - [Toàn bộ input/output các bài](resources/TestcasesVPC2023.zip)
 - [Link cuộc thi (có thể bị xoá bất kì lúc nào)](https://vpc.vnoi.info/contest/vpc)
+- [Lời giải & Bình luận ở VPC 2023 Practice Session](https://github.com/thucdx/vcc23_practice_session)
 
 ## Final Ranking
 
@@ -122,12 +123,18 @@ Bài này cần tìm cách sắp xếp khách hàng tương ứng với kỹ thu
 
 [View source I_HoTroKhachHang (Java)](src/I_HoTroKhachHang.java)
 
-### J. Rôbôt thông minh
+### J. Robôt thông minh
 (*4.2/10*)
 
 Bài này có 1 cách là sinh ngẫu nhiên các chỉ thị rồi chọn ra chỉ thị tốt nhất.
 Một số cách tốt hơn có thể cân nhắc sử dụng quy hoạch động, đệ quy nhánh cận, tham lam, vân vân.
 
 [View source J_RobotThongMinh (Java)](src/J_RobotThongMinh.java)
+
+
+----
+*Happy Coding!*
+
+ThucDX
 
 
