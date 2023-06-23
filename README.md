@@ -5,12 +5,17 @@ VPC 2023
 ## Một số link
 
 - [Đề thi](resources/VPC2023.pdf)
-- [Code đáp án bằng C++ (không giải thích)](resources/Đáp án VPC 2023_C++_Judge.pdf)
+- [Code đáp án bằng C++ (không giải thích)](resources/Đáp%20án%20VPC%202023_C++_Judge.pdf)
 - [Bảng ranking trước đóng băng](resources/ranking_before_freeze.csv)
 - [Bảng ranking cuối cùng](resources/ranking_before_freeze.csv)
 - [Toàn bộ input/output các bài](resources/TestcasesVPC2023.zip)
 - [Link cuộc thi (có thể bị xoá bất kì lúc nào)](https://vpc.vnoi.info/contest/vpc)
 
+## Final Ranking
+
+(Team của tác giả bài viết này tên là *Code_Toàn_Bug*)
+
+![Final Ranking](resources/Ranking_VPC2023.png)
 ## Các bài toán và lời giải
 
 ### A. Sắp xếp chỗ ngồi
@@ -27,7 +32,7 @@ Sắp xếp vị trí của Nhà, và vị trí Kho gạo theo thứ tự tăng 
 ### C. Khảo sát dân cư
 
 Bài này cần sắp xếp theo thứ tự giảm dần của `f_i = c_i / p_i`.
-Sau đó lấy lần lượt từ trên xuống dưới dừng lại khi `f_i < f_(i-1)`.
+Sau đó lấy lần lượt từ trên xuống dưới dừng lại khi `f_i > f_(i-1)`.
 Bài sẽ hay hơn nếu yêu cầu in ra `k` lớn nhất, thay vì bất kì `k` nào.
 
 [View source C_KhaoSatDanCu (Java)](src/C_KhaoSatDanCu.java)
@@ -74,9 +79,19 @@ TODO: more details
 [View source G_PhuSongInternet](src/G_PhuSongInternet.java)
 
 
-##
 ### I. Hỗ trợ khách hàng
+Bài này cần tìm cách sắp xếp khách hàng tương ứng với kỹ thuật viên, để đảm bảo quãng đường đi xa nhất là nhỏ nhất.
 
+Để làm bài này có 1 số bước như sau:
+- Tính toán tất cả các cặp khoảng cách `(customer_i, technician_j)` với mọi `i, j` trong [1, k]. Để làm điều này, sử dụng thuật toán `Floyd-Warshall` để tìm khoảng cách ngắn nhất của tất cả cặp đỉnh.
+- Bài toán trở thành: có 2 tập `C` và `T`, mỗi tập `k` phần tử, tìm số `minDist` nhỏ nhất để tồn tại cách ghép k cặp `(u, v)` với `u` thuộc `C`, `v` thuộc `T` mà `d(u,v)` <= `minDist`
+- Để tìm `minDist` ta sẽ sử dụng Binary Search.
+- Với mỗi `minDist` ta sẽ có 1 số lượng tập cạnh nhất định (lấy tất cả các cạnh nối giữa C và T mà cạnh đó khoảng cách <= minDist), cần kiểm tra xem tồn tại cách ghép đủ k cặp cạnh nối giữa C và T không?
+Đây là một trường hợp của bài toán `Cặp ghép cực đại` (`Maximum Bipartite Matching`). Có nhiều thuật toán khác nhau để giải, trong lời giải dưới đây sử dụng `Kuhn's algorithm`. Các code mẫu của các thuật toán khác nhau có thể tham khảo ở đây: [Cặp ghép cực đại trên đồ thị hai phía
+  ](https://oj.vnoi.info/problem/nkbm)
 
-### J. Rô bôt thông minh
+[View source I_HoTroKhachHang (Java)](src/I_HoTroKhachHang.java)
+
+### J. Rôbôt thông minh
+TODO: more details
 
