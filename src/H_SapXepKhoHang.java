@@ -1,14 +1,15 @@
 import java.io.*;
 import java.nio.file.Files;
+import java.util.Arrays;
 import java.util.StringTokenizer;
 
 /**
  * @author thucdx
  */
-public class A_XepChoNgoi {
+public class H_SapXepKhoHang {
     static boolean IS_LOCAL = System.getenv("LOCAL_JUDGE") != null;
     static boolean DEBUG = IS_LOCAL & true;
-    static String INPUT_FILE = "input/A.inp";
+    static String INPUT_FILE = "input/H.inp";
 
     public static void main(String[] args) {
         try {
@@ -17,23 +18,32 @@ public class A_XepChoNgoi {
             InputReader ir = new InputReader(is);
 
             // Process here!
-            int n = ir.nextInt(), m = ir.nextInt();
-            String[] b = new String[n];
-            for (int i = 0; i < n; i++) {
-                b[i] = ir.next();
-            }
+            int n = ir.nextInt();
+            int[] a, s;
 
-            boolean found = false;
-            for (int i = 0; i < n && !found; i++) {
-                for (int j = 0; j < m && !found; j++) {
-                   if (b[i].charAt(j) == '.'
-                   && (j + 1 < m) && b[i].charAt(j + 1) == '.'
-                   && (j + 2 < m) && b[i].charAt(j + 2) == '.') {
-                       bw.write((i + 1) + " " + (j + 1) + "\n");
-                       found = true;
-                   }
+            a = new int[n];
+            for (int i = 0; i < n; i++) {
+                a[i] = ir.nextInt();
+            }
+            s = Arrays.copyOf(a, n);
+            Arrays.sort(s);
+
+            long[][] dp = new long[n][n];
+
+            for (int i = 0; i < n; i++) {
+                dp[i][0] = Math.abs(a[i] - s[0]) + (i > 0 ? dp[i-1][0] : 0);
+
+                for (int j = 1; j < n; j++) {
+                    dp[i][j] = Math.min(dp[i][j-1], (i > 0 ? dp[i-1][j] : 0) + Math.abs(a[i] - s[j]));
                 }
             }
+
+            long res = (long) 1e13;
+            for (int i = 0; i < n; i++) {
+                res = Math.min(res, dp[n-1][i]);
+            }
+
+            bw.write(res + "\n");
             bw.flush();
         } catch (Exception ex) {
             ex.printStackTrace();
