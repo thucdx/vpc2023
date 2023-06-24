@@ -72,7 +72,6 @@ Bài này cần tìm cách tách sâu `s` thành các từ cho trước trong t�
 
 [View source F_TachXau (Java)](src/F_TachXau.java)
 
-[H_SapXepKhoHang.java](..%2Falgo%2Fi_vcc23%2FH_SXKH.java)
 ### G. Phủ sóng internet
 Bài này trước cần giải bài toán 1D sẽ dễ hình dung, sau đó bài toán 2D chỉ đơn giản là giải 2 bài 1D và lấy tích nhân với nhau.
 
