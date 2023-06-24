@@ -5,9 +5,9 @@ Viettel Programming Contest 2023
 ## Một số link
 
 - [Đề thi](resources/VPC2023.pdf)
-- [Code đáp án bằng C++ (không giải thích)](resources/Đáp%20án%20VPC%202023_C++_Judge.pdf)
+- [Bảng ranking cuối cùng](resources/ranking_final.csv)
 - [Bảng ranking trước đóng băng](resources/ranking_before_freeze.csv)
-- [Bảng ranking cuối cùng](resources/ranking_before_freeze.csv)
+- [Code đáp án bằng C++ (không giải thích)](resources/Đáp%20án%20VPC%202023_C++_Judge.pdf)
 - [Toàn bộ input/output các bài](resources/TestcasesVPC2023.zip)
 - [Link cuộc thi (có thể bị xoá bất kì lúc nào)](https://vpc.vnoi.info/contest/vpc)
 - [Lời giải & Bình luận ở VPC 2023 Practice Session](https://github.com/thucdx/vcc23_practice_session)
