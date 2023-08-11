@@ -11,7 +11,7 @@ Viettel Programming Contest 2023
 - [Toàn bộ input/output các bài](resources/TestcasesVPC2023.zip)
 - [Link cuộc thi (có thể bị xoá bất kì lúc nào)](https://vpc.vnoi.info/contest/vpc)
 - [Lời giải & Bình luận ở VPC 2023 Practice Session](https://github.com/thucdx/vcc23_practice_session)
-- [Đề thi & Lời giải của VPC 2022 (cùng tác giả))(https://github.com/thucdx/viettel_code_challenges_2022)
+- [Đề thi & Lời giải của VPC 2022 (cùng tác giả)](https://github.com/thucdx/viettel_code_challenges_2022)
 
 ## Final Ranking
 
